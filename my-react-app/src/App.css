@@ -10,12 +10,12 @@
   
   position: relative;
   padding: 10px;
-  left:600px;
+  left:-600px;
   top: -150px;
   will-change: filter;
   transition: filter 300ms;
   opacity: 0;
-  animation: fadeIn 10s ease-in forwards;
+  animation: fadeIn 8s ease-in forwards;
 }
 
 @keyframes fadeIn {
@@ -53,9 +53,10 @@
   flex: 0 0 auto; /* Prevent cards from growing or shrinking and maintain their original size */
     min-width: 250px;
     max-width: 250px; /* Set a minimum width for each card */
-    height: 400px;
-    margin-right: 15px;
-    background-color: #f0f0f0;
+    height: 350px;
+    width:200px ;
+    margin: 35px;
+    background-color: #aa1a1a;
     border: 1px solid #ccc;
     border-radius: 8px;
     display: flex;
@@ -67,7 +68,20 @@
     padding:20px;
     margin-left: 20px;
     scroll-behavior: smooth;
+     box-shadow: 0 4px 8px rgba(166, 204, 30, 0.2);
+     transform: translateY(20px);
+    animation: fadeInUp 8s ease forwards;
+    opacity: 0;
+    animation-delay: 0.2s; /* optional stagger */
+    transition: transform 0.5s ease-in-out;
+    
   
+  
+}
+.card:hover{
+    transform: scale(1.1) translateY(-10px);
+    
+   box-shadow: 0 10px 10px rgba(16, 27, 3, 0.9);
 }
 .card > p{
   display: inline-block;
@@ -76,10 +90,37 @@
      overflow:hidden; /* Adds scrollbars if content overflows */
      max-height: 200px; 
      max-width: 200px; 
-    word-wrap: break-word;
+     white-space: normal;
+    word-wrap:break-word;
     
 }
-.card
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(1);
+  }
+}
+
+.skills{
+    align-items: center;
+    margin-left: 50vh;
+   position: absolute;
+   top:140px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    padding: 0px;
+    
+}
+.skillsTitle{
+  text-decoration: underline;
+    text-decoration-color: #171717;
+    padding-top: 2%;
+    text-align: center;
+}
+
+
+
 
 .read-the-docs {
   color: #888;

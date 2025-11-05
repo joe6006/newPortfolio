@@ -48,6 +48,17 @@ const containerRef = useHorizontalScroll();
         
     </header>
 
+    <div className='skills'>
+      <h2 className='skillsTitle'>skills</h2>
+      <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+          <li>React</li>
+          
+      </ul>
+    </div>
+
               <div className="card-container"  ref={containerRef}>
                 <div className='card' >
                     <h5>budget application</h5>
