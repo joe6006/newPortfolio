@@ -5,8 +5,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+   background: linear-gradient(325deg,#051F20,#235347,#8EB69B);
+  overflow-y: hidden;
+  overflow-x: hidden;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

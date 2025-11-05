@@ -6,16 +6,22 @@
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+
+  
+  position: relative;
+  padding: 10px;
+  left:600px;
+  top: -150px;
   will-change: filter;
   transition: filter 300ms;
+  opacity: 0;
+  animation: fadeIn 10s ease-in forwards;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes logo-spin {
@@ -33,9 +39,47 @@
   }
 }
 
-.card {
-  padding: 2em;
+.card-container{
+  width: 1800px;
+  overflow-x: auto;     /* Enables horizontal scroll */
+  overflow-y: hidden;   /* Prevents vertical scroll */
+  white-space: nowrap;  /* Prevents content from wrapping */
+  position: relative;
+  left: -260px;
+  top: 150px;
+
 }
+.card{
+  flex: 0 0 auto; /* Prevent cards from growing or shrinking and maintain their original size */
+    min-width: 250px;
+    max-width: 250px; /* Set a minimum width for each card */
+    height: 400px;
+    margin-right: 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 1.2em;
+    text-overflow: clip;
+    display: inline-block;
+    padding:20px;
+    margin-left: 20px;
+    scroll-behavior: smooth;
+  
+}
+.card > p{
+  display: inline-block;
+    justify-content:center;
+   align-items: center;
+     overflow:hidden; /* Adds scrollbars if content overflows */
+     max-height: 200px; 
+     max-width: 200px; 
+    word-wrap: break-word;
+    
+}
+.card
 
 .read-the-docs {
   color: #888;

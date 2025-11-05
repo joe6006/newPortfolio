@@ -1,33 +1,83 @@
 import { useState } from 'react'
+import { useEffect, useRef } from 'react';
+import React from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+   
+function useHorizontalScroll() {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const onWheel = (e) => {
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        el.scrollLeft += e.deltaY;
+      }
+    };
+
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, []);
+
+  return ref;
+}
+const containerRef = useHorizontalScroll();
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <header  >
+       
+            <h1 className="logo" 
+            style={{
+              
+              fontFamily:'Courier New',
+              fontWeight:'10'
+              
+            }
+
+            }
+
+            >Joseph Hill</h1>
+        
+    </header>
+
+              <div className="card-container"  ref={containerRef}>
+                <div className='card' >
+                    <h5>budget application</h5>
+                    <p >fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+                </div>
+                <div className='card'>
+                    <h5>budget application</h5>
+                    <p >fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p >
+                </div>
+                <div className='card' >
+                    <h5>budget application</h5>
+                    <p >fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p >
+                </div>
+                <div className="card" >
+                    <h5>budget application</h5>
+                    <p >fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p >
+                </div>
+                
+                <div className='card'>
+                    <h5>password generator</h5>
+                    
+                    <p >"checkout mypassword generator!"</p>
+                </div>
+                <div className='card'>
+                    <h5>password generator</h5>
+                    
+                    <p >"checkout mypassword generator!"</p>
+                </div>
+            </div>
+        
     </>
   )
 }
