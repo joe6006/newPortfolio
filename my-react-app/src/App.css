@@ -100,36 +100,7 @@
   }
 }
 
-.skills {
-  align-items: center;
-  margin-left: 50vh;
-  position: absolute;
-  top: 120px;
-  width: 20vh;
-  padding: 0 60px;
-  border: 2px solid rgb(26, 25, 25);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px 10px rgba(7, 31, 22, 0.2);
-  background-color: transparent;
-}
 
-.skillsTitle {
-  text-decoration: underline;
-  text-decoration-color: #171717;
-  padding-top: 2%;
-  text-align: center;
-}
-
-.aboutme-container{
-  width: 50vh;
-  padding: 0 60px;
-  border: 2px solid rgb(26, 25, 25);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px 10px rgba(7, 31, 22, 0.2);
-  position: absolute;
-  top: 120px;
-  right: 110px;
-}
 
 .read-the-docs {
   color: #888;
