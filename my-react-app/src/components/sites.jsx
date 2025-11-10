@@ -1,8 +1,8 @@
 
 import { useState } from 'react'
 import { useEffect, useRef } from 'react';
-import githublogo from "./assets/github.svg"
-import linkedinLogo from "./assets/LIN.png"
+import githublogo from "./src/assets/github.svg"
+import linkedinLogo from './src/assets/LIN.png'
 import './sites.css'
     const sites = [
         {
