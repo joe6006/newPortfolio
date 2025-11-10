@@ -49,7 +49,7 @@ const App = () => {
          </p>
     </div>
 
-              <div className="card-container"  ref={containerRef}>
+              <div className="card-container"  >
                 <div className='card' >
                     <h5>budget application</h5>
                     <p >fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
