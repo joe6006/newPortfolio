@@ -11,15 +11,16 @@
 }
 
 .logo {
-  position: relative;
+  position: absolute;
   padding: 10px;
-  left: -600px;
-  top: -150px;
+  left: 100px;
+  top: 50px;
   will-change: filter;
   transition: filter 300ms;
   opacity: 0;
   animation: fadeIn 8s ease-in forwards;
 }
+
 
 @keyframes fadeIn {
   to {

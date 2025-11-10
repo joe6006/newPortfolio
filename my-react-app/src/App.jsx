@@ -4,35 +4,16 @@ import React from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import SiteList from './components/sites';
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0);
-   
-function useHorizontalScroll() {
-  const ref = useRef(null);
+  
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const onWheel = (e) => {
-      if (e.deltaY !== 0) {
-        e.preventDefault();
-        el.scrollLeft += e.deltaY;
-      }
-    };
-
-    el.addEventListener('wheel', onWheel, { passive: false });
-    return () => el.removeEventListener('wheel', onWheel);
-  }, []);
-
-  return ref;
-}
-const containerRef = useHorizontalScroll();
 
   return (
     <>
-    <header  >
+    <header>
        
             <h1 className="logo" 
             style={{
@@ -45,8 +26,11 @@ const containerRef = useHorizontalScroll();
             }
 
             >Joseph Hill</h1>
+
+            
         
     </header>
+     <SiteList />
 
     <div className='skills'>
       <h2 className='skillsTitle'>skills</h2>

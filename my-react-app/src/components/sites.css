@@ -1,0 +1,17 @@
+.site-container{
+  position:absolute;
+  display: flex;
+  left:6vw;
+  top: 18vh;
+  gap:1vw;
+  width: 10vw;
+  height: 25vh;
+  
+  
+}
+
+.img{
+  display: inline-flex;
+  height: 5vh;
+}
+
