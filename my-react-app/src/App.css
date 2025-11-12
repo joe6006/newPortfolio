@@ -43,62 +43,8 @@
   }
 }
 
-.card-container {
-  width: 1800px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  position: relative;
-  left: -260px;
-  top: 150px;
-}
 
-.card {
-  flex: 0 0 auto;
-  min-width: 250px;
-  max-width: 250px;
-  height: 340px;
-  width: 200px;
-  margin: 35px 20px;
-  
-  background-color: #04423d;
-  border: 2px solid rgb(26, 25, 25);
-  border-radius: 8px;
-  display: inline-block;
-  padding: 20px;
-  font-size: 1.2em;
-  text-overflow: clip;
-  scroll-behavior: smooth;
-  box-shadow: 0 2px 8px 10px rgba(7, 31, 22, 0.2);
-  transform: translateY(20px);
-  animation: fadeInUp 8s ease forwards;
-  opacity: 0;
-  animation-delay: 0.2s;
-  transition: transform 0.5s ease-in-out;
-}
 
-.card:hover {
-  transform: scale(1.1) translateY(-10px);
-  box-shadow: 0 10px 10px rgba(16, 27, 3, 0.9);
-}
-
-.card > p {
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  max-height: 200px;
-  max-width: 200px;
-  white-space: normal;
-  word-wrap: break-word;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(1);
-  }
-}
 
 
 
