@@ -6,7 +6,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import SiteList from './components/sites';
 import { EmblaCarousel } from './components/project';
-
+import RenderAboutMe from './components/aboutme';
+import RenderSkills from './components/skills';
 const App = () => {
   const [count, setCount] = useState(0);
   
@@ -22,8 +23,10 @@ const App = () => {
               fontWeight:'10'
               
             }}>Joseph Hill</h1>        
-    </header>
-     <SiteList />
+      </header>
+      <SiteList/>
+      <RenderAboutMe/>
+      <RenderSkills/>
       <EmblaCarousel/>
     
     

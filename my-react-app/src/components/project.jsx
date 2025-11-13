@@ -3,11 +3,11 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useEffect } from "react";
 import Autoplay from 'embla-carousel-autoplay'
 import './project.css';
-
+import { useState } from "react";
 
 export function EmblaCarousel(){
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
-
+    const [showCards, setShowCards] = useState(false);
      useEffect(() => {
             if (emblaApi) {
             console.log(emblaApi.slideNodes()) // Access API
@@ -38,7 +38,7 @@ export function EmblaCarousel(){
                     ];
                     
                     
-
+                    
 
 
 
@@ -47,16 +47,22 @@ export function EmblaCarousel(){
 
 
     return (
-                <div className="embla" ref={emblaRef}>
-                <div className="embla__container">{ cards.map(card =>(
-                    <div className='card' key={cards.id}>
-                        <h5>{card.name}</h5>
-                        <p>{card.description}</p>
+                <section>
+                    <button className='buttonMove'  onClick={()=>{setShowCards(!showCards) } }>Projects</button>
+                    {
+                        showCards&&(
+                    <div className="embla" ref={emblaRef}>
+                    <div className="embla__container">{ cards.map(card =>(
+                        <div className='card' key={cards.id}>
+                            <h5>{card.name}</h5>
+                            <p>{card.description}</p>
+                        </div>
+                    
+                            ))                
+                            }
                     </div>
-
-                ))                
-                }
-                </div>
-                </div>
+                    </div>
+                    )}
+                </section>
             )  
 }

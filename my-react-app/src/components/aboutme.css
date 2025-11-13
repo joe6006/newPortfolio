@@ -8,3 +8,10 @@
   top: 120px;
   right: 110px;
 }
+
+.aboutme-button{
+  position: fixed;
+  padding: 10px;
+  left: 5vw;
+  top: 50vh;
+}

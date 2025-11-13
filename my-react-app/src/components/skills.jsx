@@ -1,12 +1,16 @@
-import React from "react";
+import { useState } from "react";
 import './skills.css';
 
 const renderSkills = ()=>{
-
+    const [skills, setSkills] = useState(false);
 
 
     return (
         <div className='skills'>
+            <button className="skillsbutton" onClick={()=>{setSkills(!skills)}}>skills</button>
+            { 
+            skills&&(
+            <div>
             <h2 className='skillsTitle'>skills</h2>
             <ul>
                 <li>HTML</li>
@@ -15,6 +19,8 @@ const renderSkills = ()=>{
                 <li>React</li>
                 
             </ul>
+            </div>
+           ) }
     </div>
     )
 
