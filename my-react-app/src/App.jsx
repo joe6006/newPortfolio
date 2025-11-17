@@ -8,6 +8,7 @@ import SiteList from './components/sites';
 import { EmblaCarousel } from './components/project';
 import RenderAboutMe from './components/aboutme';
 import RenderSkills from './components/skills';
+import RenderPhotos from './components/gamePics';
 const App = () => {
   const [count, setCount] = useState(0);
   
@@ -28,7 +29,7 @@ const App = () => {
       <RenderAboutMe/>
       <RenderSkills/>
       <EmblaCarousel/>
-    
+      <RenderPhotos/>
     
         
     </>

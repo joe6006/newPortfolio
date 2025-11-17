@@ -1,0 +1,16 @@
+.embla {
+  overflow: hidden;
+  position: relative;
+  left: 20vw;
+}
+.embla__container {
+  display: flex;
+  
+  width: 50vw;
+  height:50vh;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  
+}
