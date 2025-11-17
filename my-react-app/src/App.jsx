@@ -8,7 +8,7 @@ import SiteList from './components/sites';
 import { EmblaCarousel } from './components/project';
 import RenderAboutMe from './components/aboutme';
 import RenderSkills from './components/skills';
-import RenderPhotos from './components/gamePics';
+import RenderPhotos, { renderPhotos } from './components/gamePics';
 const App = () => {
   const [count, setCount] = useState(0);
   
@@ -16,6 +16,9 @@ const App = () => {
 
   return (
     <>
+    {renderPhotos()}
+    <div className="overlay"></div>
+    <div className='content'>
     <header>
             <h1 className="logo" 
             style={{
@@ -29,7 +32,7 @@ const App = () => {
       <RenderAboutMe/>
       <RenderSkills/>
       <EmblaCarousel/>
-      <RenderPhotos/>
+      </div>
     
         
     </>

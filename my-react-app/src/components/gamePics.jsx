@@ -15,7 +15,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import './gamePics.css'
 import Autoplay from 'embla-carousel-autoplay'
 export function renderPhotos(){
-    const [emblaRef] = useEmblaCarousel({loop:false}, [Autoplay()]);
+    const [emblaRef] = useEmblaCarousel({loop:true}, [Autoplay()]);
 
     const gamePhotos = [
     {
@@ -74,24 +74,26 @@ export function renderPhotos(){
 
 
     return (
-                <section>
+                <section  className="embla" ref={emblaRef}>
                    
                         
-                    <div className="embla" ref={emblaRef}>
+                    
                         <div className="embla__container">
                             {gamePhotos.map((photo)=>(
+                                <div className="embla__slide"
+                                key={photo.id}>
                                 <img 
-                                key={photo.id}
+                                
                                  src={photo.src} 
                                  alt={photo.alt} 
-                                 className="embla__slide"
+                                 
                                   />
-
+                                </div>
                             ))
                             
                             }
                         </div>
-                    </div>
+                   
                     
                 </section>
             )  

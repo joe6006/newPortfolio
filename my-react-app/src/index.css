@@ -5,7 +5,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-   background: linear-gradient(50deg,#041b1b,#020f0f,#020f0f,#0f221d,#8EB69B);
+   
+   background-image: radial-gradient(circle, rgb(36, 34, 56), rgb(112, 148, 177),rgb(7, 17, 26), rgb(3, 35, 83));
+
   overflow-y: hidden;
   overflow-x: hidden;
   font-synthesis: none;
@@ -67,3 +69,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+

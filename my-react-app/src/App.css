@@ -9,6 +9,12 @@
               
           
 }
+.content {
+  position: relative;
+  z-index: 1;   /* ensures it's above the background carousel */
+  color: white; /* text visible against images */
+}
+
 
 .logo {
   position: absolute;
