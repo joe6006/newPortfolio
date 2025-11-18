@@ -8,7 +8,7 @@ import SiteList from './components/sites';
 import { EmblaCarousel } from './components/project';
 import RenderAboutMe from './components/aboutme';
 import RenderSkills from './components/skills';
-import RenderPhotos, { renderPhotos } from './components/gamePics';
+import  { renderPhotos } from './components/gamePics';
 const App = () => {
   const [count, setCount] = useState(0);
   
@@ -26,9 +26,10 @@ const App = () => {
               fontFamily:'Courier New',
               fontWeight:'10'
               
-            }}>Joseph Hill</h1>        
+            }}>Joseph Hill</h1>   
+            <SiteList/>     
       </header>
-      <SiteList/>
+      
       <RenderAboutMe/>
       <RenderSkills/>
       <EmblaCarousel/>

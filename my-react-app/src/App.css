@@ -10,21 +10,21 @@
           
 }
 .content {
-  position: relative;
-  z-index: 1;   /* ensures it's above the background carousel */
-  color: white; /* text visible against images */
+  
+  z-index: 1;   
+  color: white; 
+
 }
 
 
 .logo {
-  position: absolute;
-  padding: 10px;
-  left: 100px;
-  top: 50px;
-  will-change: filter;
-  transition: filter 300ms;
-  opacity: 0;
-  animation: fadeIn 8s ease-in forwards;
+ position:absolute;
+  display: flex;
+  left:6vw;
+  top: 0vh;
+  gap:1vw;
+  width: 10vw;
+  height: 25vh;
 }
 
 

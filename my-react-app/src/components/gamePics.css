@@ -1,27 +1,29 @@
-
 .embla {
-  position: relative;
   overflow: hidden;
-  top:20vh;
-  width: 100vw;   /* full viewport width */
-  height: 100vh; 
-  z-index: 0;
- 
- 
-}
-
-.embla__container {
   display: flex;
-  height: 75%;  
+  position:relative;
+  height: 50vh;
+  width: 40vw;
+ inset: 235px 510px ;
+ border-bottom: solid rgb(219, 218, 218);
+ border-left: solid rgb(219, 218, 218);
  
 }
-
-.embla__slide {
-  flex: 0 0 100%; 
-  min-width: 0;
-  position: relative;
+.embla__container {
+  position: absolute;
+  padding-top:60px;
+ padding-left:60px;
+   
+  display: flex;
+  height: 100%;
   
 }
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  
+}
+
 
 .embla__slide > img {
   width: 80%;
@@ -30,8 +32,9 @@
   display:block;
     -webkit-transform: translateZ(0); /* GPU boost if needed */
   transform: translateZ(0);
+  
  
-  background-color: rgba(59, 59, 59, 0.1);
+
 }
 
 
