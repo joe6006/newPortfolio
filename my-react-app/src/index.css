@@ -6,8 +6,12 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
    
-   background-image: radial-gradient(circle, rgb(36, 34, 56), rgb(112, 148, 177),rgb(7, 17, 26), rgb(3, 35, 83));
-
+  background-image: url('./assets/Portfolio/trailer.jpg');
+  background-position: center;
+  background-size: cover;     /* fills area, cropping as needed */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
   overflow-y: hidden;
   overflow-x: hidden;
   font-synthesis: none;
@@ -15,6 +19,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+:root::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center,
+    rgba(0,0,0,0) 55%,
+    
+    rgba(0,0,0,0.45) 75%,
+    rgba(0,0,0,0.85) 100%
+  );
+   mix-blend-mode: multiply;
+  z-index: 2;
+}
+
 
 a {
   font-weight: 500;

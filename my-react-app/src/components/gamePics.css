@@ -1,39 +1,37 @@
+
 .embla {
-  position: fixed;   /* background */
-  top: 10vh;
-  left: 25vw;
-  width: 80%;
-  height: 80%;
-  z-index: -1;
+  position: relative;
   overflow: hidden;
+  top:20vh;
+  width: 100vw;   /* full viewport width */
+  height: 100vh; 
+  z-index: 0;
+ 
+ 
 }
 
 .embla__container {
   display: flex;
-  height: 100%;
-  width: 100%;
-  
+  height: 75%;  
+ 
 }
 
 .embla__slide {
-  flex: 0 0 80%;  
- 
-  height: 100%;
+  flex: 0 0 100%; 
+  min-width: 0;
+  position: relative;
+  
 }
 
-.embla__slide img {
-  
-  width: 100%;
-  height: 100%;
-  object-fit:scale-down;  
-  background: transparent;   
+.embla__slide > img {
+  width: 80%;
+  height: 80%;
+  object-fit:contain;
+  display:block;
+    -webkit-transform: translateZ(0); /* GPU boost if needed */
+  transform: translateZ(0);
+ 
+  background-color: rgba(59, 59, 59, 0.1);
 }
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4); /* 40% black overlay */
-  z-index: 0;                  /* sits above carousel but below content */
-}
+
+
