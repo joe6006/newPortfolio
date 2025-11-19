@@ -1,17 +1,22 @@
 .site-container{
   position:absolute;
-  display: flex;
-  left:6vw;
-  top: 18vh;
-  gap:1vw;
-  width: 10vw;
-  height: 25vh;
-  
+  display: inline-flex;
+  align-items: center;
+  right:0vw;
+  top: 10vh;
+  gap:3vw;
+  width: 20vw;
+  height: 12vh;
+  background-color: rgb(67, 68, 68, 0.9);
+ padding-left: 50px;
+ border-radius: 5px;
+ border:solid;
+ border-color: rgb(124, 201, 224) ;
   
 }
 
 .img{
-  display: inline-flex;
+  
   height: 5vh;
 }
 

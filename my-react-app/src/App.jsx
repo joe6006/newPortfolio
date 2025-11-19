@@ -27,13 +27,14 @@ const App = () => {
               fontWeight:'10'
               
             }}>Joseph Hill</h1>   
-            <SiteList/>     
+                
       </header>
-      
+      </div>
+      <SiteList/> 
       <RenderAboutMe/>
       <RenderSkills/>
       <EmblaCarousel/>
-      </div>
+      
     
         
     </>
