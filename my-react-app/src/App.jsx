@@ -29,11 +29,14 @@ const App = () => {
             }}>Joseph Hill</h1>   
                 
       </header>
-      </div>
-      <SiteList/> 
-      <RenderAboutMe/>
+      <div className='button-list'>
+       <RenderAboutMe/>
       <RenderSkills/>
       <EmblaCarousel/>
+      </div>
+      </div>
+      <SiteList/> 
+     
       
     
         

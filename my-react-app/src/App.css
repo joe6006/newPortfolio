@@ -10,22 +10,31 @@
           
 }
 .content {
-  
-  z-index: 1;   
+  background-image: linear-gradient(to right, rgba(8, 8, 8, 0.932),rgba(22, 22, 22, 0.884),rgba(44, 41, 41, 0.6));
+  width: 20vw;
+  height: 100vh;
+  z-index: 2;   
   color: white; 
-
-}
-
-
-.logo {
- position:absolute;
-  display: flex;
-  left:6vw;
+  position: absolute;
+  left:0vw;
   top: 0vh;
-  gap:1vw;
-  width: 10vw;
-  height: 25vh;
+border-right: solid 2px white;
+  
+
 }
+
+.button-list{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20vh;
+  gap: 10vh;
+  
+  
+  
+}
+
+
 
 
 @keyframes fadeIn {

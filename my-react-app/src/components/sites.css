@@ -3,20 +3,21 @@
   display: inline-flex;
   align-items: center;
   right:0vw;
-  top: 10vh;
+  top: 0vh;
   gap:3vw;
   width: 20vw;
   height: 12vh;
   background-color: rgb(67, 68, 68, 0.9);
  padding-left: 50px;
  border-radius: 5px;
- border:solid;
- border-color: rgb(124, 201, 224) ;
-  
+ border-bottom:solid;
+ border-bottom-color: rgb(124, 201, 224) ;
+  border-left:solid;
+ border-left-color: rgb(124, 201, 224) ;
 }
 
 .img{
   
-  height: 5vh;
+  height: 7vh;
 }
 

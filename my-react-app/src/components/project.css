@@ -12,13 +12,8 @@
 
 
 
-.buttonMove{
-   position: fixed;
-  padding: 10px;
-  left: 5vw;
-  top: 45vh;
-}
 
+/*
 .card {
   flex: 0 0 auto;
   min-width: 250px;
@@ -65,3 +60,4 @@
     transform: translateY(1);
   }
 }
+*/

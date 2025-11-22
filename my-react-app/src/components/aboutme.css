@@ -1,17 +1,24 @@
-.aboutme-container{
-  width: 50vh;
-  padding: 0 60px;
-  border: 2px solid rgb(26, 25, 25);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px 10px rgba(7, 31, 22, 0.2);
+.aboutme-background{
+background-color: rgba(44, 41, 41, 0.6);
+  width: 35vw;
+  height: 101vh;
+  z-index: 2;   
+  color: white; 
   position: absolute;
-  top: 120px;
-  right: 110px;
+  left:21vw;
+  bottom: -35vh;
+  justify-content: center;
+
+}
+
+.aboutme-container{
+    padding-top:10%;
+ padding-left: 10%;
+ width: 75%;
+ height: 80%;
+
 }
 
 .aboutme-button{
-  position: fixed;
-  padding: 10px;
-  left: 5vw;
-  top: 50vh;
+  
 }
