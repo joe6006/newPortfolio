@@ -31,9 +31,17 @@ background-color: rgba(44, 41, 41, 0.712);
  
   
 }
+@font-face{
+    font-family:"EX_PS_Medium_Neon";
+    src: url("/my-react-app/src/fonts/EX_PS_Medium_Neon.otf") 
+  format('opentype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
 .head{
   position: absolute;
-  
+  font-family: "EX_PS_Medium_Neon.otf";
   top: 0;
   left: 0;
   text-align: left;
@@ -42,11 +50,18 @@ background-color: rgba(44, 41, 41, 0.712);
   height: 20%;
  
 }
-.head>h2{
-  font-weight:100;
-  font-family: url(/my-react-app/src/fonts/EX\ PS\ Medium\ Neon.otf) format('.otf');
+
+@font-face{
+    font-family:"EX_PS_Medium_Neon";
+    src: url("/my-react-app/src/fonts/EX_PS_Medium_Neon.otf") 
+  format('opentype');
+  font-weight: 400;
   font-display: swap;
   font-style: normal;
+}
+.head>h2{
+  font-weight:100;
+  
   padding-top: 50px;
   padding-left: 20px;
  position: absolute;
