@@ -5,11 +5,12 @@
   padding: 2rem;
   text-align: center;
 
-   
+   font-family: 'myNeon';
               
           
 }
 .content {
+  
   background-image: linear-gradient(to right, rgba(8, 8, 8, 0.932),rgba(22, 22, 22, 0.884),rgba(44, 41, 41, 0.6));
   width: 20vw;
   height: 100vh;
@@ -18,7 +19,8 @@
   position: absolute;
   left:0vw;
   top: 0vh;
-border-right: solid 2px white;
+  border-right: solid 2px white;
+  
   
 
 }
