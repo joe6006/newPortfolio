@@ -23,7 +23,7 @@ const App = () => {
             <h1 className="logo" 
             style={{
               
-             
+              
               fontWeight:'20'
               
             }}>Joseph Hill</h1>   

@@ -1,4 +1,59 @@
 
-.skillsbutton{
-  
+.skills-list{
+   background-color: rgba(44, 41, 41, 0.712);
+  width: 35vw;
+  height: 90vh;
+  z-index: 1;   
+  color: white; 
+  position:fixed;
+  left:21vw;
+  bottom: 0vh;
+  top: 5vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: white 1px solid;
+  border-radius: 2px;
+  box-shadow:
+  0px 0px 15px rgba(39, 132, 238, 0.877),
+  -0em 0em 2em 1.8em rgb(14, 14, 13);
+}
+.head{
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+  background-color: rgba(26, 24, 24, 0.664);
+  width: 100%;
+  height: 20%;
+  border-bottom: rgb(245, 243, 243) solid;
+}
+.skillsTitle{
+    font-weight:100;
+    font-family: "myNeon";
+    padding-left: 10px;
+    position: fixed;
+    font-size: 80px;
+}
+.ul-div{
+    background-color: rgba(26, 24, 24, 0.664);
+    position: relative;
+    width: 95%;
+    height: 70%;
+    display: flex;
+    top: 10%;
+    border-radius: 5px;
+    justify-content:baseline;
+    padding: 10px;
+}
+.ul-div>ul{
+    font-size: 40px;
+    text-align: left;
+    width:auto;
+    
+}
+ul>li{
+    list-style-type: circle;
+    font-family: 'myMedium';
+    
 }

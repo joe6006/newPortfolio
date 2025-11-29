@@ -10,15 +10,19 @@ const renderSkills = ()=>{
             <button className="skillsbutton" onClick={()=>{setSkills(!skills)}}>skills</button>
             { 
             skills&&(
-            <div>
-            <h2 className='skillsTitle'>skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>React</li>
-                
-            </ul>
+            <div className="skills-list">
+                <header className="head">
+                    <h2 className='skillsTitle'>skills</h2>
+                </header>
+            <content className="ul-div">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>React</li>
+                    
+                </ul>
+           </content>
             </div>
            ) }
     </div>

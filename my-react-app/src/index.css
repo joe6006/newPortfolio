@@ -45,6 +45,11 @@
   z-index: 1;
 }
 
+p{
+  font-family: 'myMedium';
+  font-size: larger;
+ 
+}
 
 a {
   font-weight: 500;
