@@ -9,10 +9,12 @@ import { EmblaCarousel } from './components/project';
 import RenderAboutMe from './components/aboutme';
 import RenderSkills from './components/skills';
 import  { renderPhotos } from './components/gamePics';
+import { use } from 'react';
 const App = () => {
   const [count, setCount] = useState(0);
-
-   function handleRenderAboutMe (){
+  const [activeButton, setActiveButton] = useState(null);
+   const handleButtons = () => {
+    
    
    }
   
