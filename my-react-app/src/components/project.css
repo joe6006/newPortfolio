@@ -1,10 +1,28 @@
-.embla {
+.card-slide {
   overflow: hidden;
-}
-.embla__container {
+  background-color: rgba(44, 41, 41, 0.712);
+  width: 37%;
+  height: 100vh;
+  z-index: 1;   
+  color: white; 
+  position:fixed;
+  left:20vw;
+  bottom: 0vh;
+  flex-direction: column;
+  align-items: center;
   display: flex;
+ 
+ 
 }
-.embla__slide {
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  position:fixed;
+  
+
+}
+.card-container{
    flex: 0 0 auto; /* Adapt slide size to its content */
   min-width: 0;
   max-width: 100%; /* Prevent from growing larger than viewport */
@@ -13,7 +31,7 @@
 
 
 
-/*
+
 .card {
   flex: 0 0 auto;
   min-width: 250px;
@@ -60,4 +78,3 @@
     transform: translateY(1);
   }
 }
-*/

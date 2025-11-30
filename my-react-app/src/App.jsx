@@ -11,9 +11,11 @@ import RenderSkills from './components/skills';
 import  { renderPhotos } from './components/gamePics';
 const App = () => {
   const [count, setCount] = useState(0);
+
+   function handleRenderAboutMe (){
+   
+   }
   
-
-
   return (
     <>
     {renderPhotos()}
@@ -45,3 +47,8 @@ const App = () => {
 }
 
 export default App
+function newFunction() {
+  (() => {
+  });
+}
+

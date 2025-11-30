@@ -6,7 +6,7 @@ import './project.css';
 import { useState } from "react";
 
 export function EmblaCarousel(){
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
     const [showCards, setShowCards] = useState(false);
      useEffect(() => {
             if (emblaApi) {
@@ -51,8 +51,8 @@ export function EmblaCarousel(){
                     <button className='buttonMove'  onClick={()=>{setShowCards(!showCards) } }>Projects</button>
                     {
                         showCards&&(
-                    <div className="embla" ref={emblaRef}>
-                    <div className="embla__container">{ cards.map(card =>(
+                    <div className="card-slide" ref={emblaRef} >
+                    <div className="card-container" >{ cards.map(card =>(
                         <div className='card' key={cards.id}>
                             <h5>{card.name}</h5>
                             <p>{card.description}</p>
