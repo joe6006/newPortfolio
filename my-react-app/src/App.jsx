@@ -9,20 +9,31 @@ import { EmblaCarousel } from './components/project';
 import RenderAboutMe from './components/aboutme';
 import RenderSkills from './components/skills';
 import  { renderPhotos } from './components/gamePics';
-import { use } from 'react';
+import renderAboutMe from './components/aboutme';
+import renderSkills from './components/skills';
+
 const App = () => {
   const [count, setCount] = useState(0);
   const [activeButton, setActiveButton] = useState(null);
-   const handleButtons = () => {
-    
-   
-   }
+  
+   const handleButtons = [EmblaCarousel,renderAboutMe,renderSkills];
+  const handleClick = (index) => {
+       
+
+    }
+    const isDisabled= (index)=>{
+       if(handleButtons){
+
+       }
+        
+    }
+
   
   return (
     <>
     {renderPhotos()}
     <div className="overlay"></div>
-    <div className='content'>
+    <div className='nav-bar'>
     <header>
             <h1 className="logo" 
             style={{
@@ -34,9 +45,11 @@ const App = () => {
                 
       </header>
       <div className='button-list'>
-       <RenderAboutMe/>
-      <RenderSkills/>
-      <EmblaCarousel/>
+          <RenderAboutMe  onClick={() => handleClick("one")} disabled={isDisabled("one")}/>
+          <RenderSkills onClick={() => handleClick("two")}
+        disabled={isDisabled("two")}/>
+          <EmblaCarousel onClick={() => handleClick("three")}
+        disabled={isDisabled("three")}/>
       </div>
       </div>
       <SiteList/> 
@@ -49,8 +62,5 @@ const App = () => {
 }
 
 export default App
-function newFunction() {
-  (() => {
-  });
-}
+
 
