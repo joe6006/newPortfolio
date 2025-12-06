@@ -14,7 +14,7 @@ const renderSkills = ()=>{
                 <header className="head">
                     <h2 className='skillsTitle'>skills</h2>
                 </header>
-            <content className="ul-div">
+            <div className="ul-div">
                 <ul>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -22,7 +22,7 @@ const renderSkills = ()=>{
                     <li>React</li>
                     
                 </ul>
-           </content>
+           </div>
             </div>
            ) }
     </div>
