@@ -14,7 +14,7 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react'
 import './gamePics.css'
 import Autoplay from 'embla-carousel-autoplay'
-export function renderPhotos(){
+ function RenderPhotos(){
     const [emblaRef] = useEmblaCarousel({loop:true}, [Autoplay()]);
 
     const gamePhotos = [
@@ -100,4 +100,4 @@ export function renderPhotos(){
 
 }
 
-export default renderPhotos
+export default RenderPhotos

@@ -11,10 +11,7 @@ const renderAboutMe= ()=>{
     return (
         <>
         <section>
-
-            <button className="aboutme-button" onClick={()=>{setShow(!show)}}>About Me</button>
-            {
-                show&&(
+           
                     <div className="aboutme-background">
                         <div className="head">
                         <h2>About me</h2>
@@ -26,7 +23,7 @@ const renderAboutMe= ()=>{
                             </p>
                         </div>
                     </div>
-            )}
+            
         </section>
             </>
     )

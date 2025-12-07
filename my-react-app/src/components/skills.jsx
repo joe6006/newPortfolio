@@ -7,9 +7,7 @@ const renderSkills = ()=>{
 
     return (
         <div className='skills'>
-            <button className="skillsbutton" onClick={()=>{setSkills(!skills)}}>skills</button>
-            { 
-            skills&&(
+        
             <div className="skills-list">
                 <header className="head">
                     <h2 className='skillsTitle'>skills</h2>
@@ -24,7 +22,7 @@ const renderSkills = ()=>{
                 </ul>
            </div>
             </div>
-           ) }
+         
     </div>
     )
 
