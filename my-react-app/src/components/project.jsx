@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
-import './project.css'
- function EmblaCarousel() {
+import './project.module.css'
+ function renderProjects() {
   const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()])
 
   return (
@@ -15,4 +15,4 @@ import './project.css'
     </div>
   )
 }
-export default EmblaCarousel
+export default renderProjects

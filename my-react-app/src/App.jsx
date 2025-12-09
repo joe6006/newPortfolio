@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import SiteList from './components/sites';
-import EmblaCarousel from './components/project';
+import RenderProjects from './components/project';
 import RenderAboutMe from './components/aboutme';
 import RenderSkills from './components/skills';
 import RenderPhotos from './components/gamePics';
@@ -42,7 +42,7 @@ const App = () => {
       </div>
       {activesection === 'about' && <RenderAboutMe/>}
       {activesection ==='skills'&& <RenderSkills />}
-      {activesection === 'projects' && <EmblaCarousel />}
+      {activesection === 'projects' && <RenderProjects />}
       <SiteList />
     </>
   );

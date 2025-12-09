@@ -4,7 +4,7 @@
 .embla__container {
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 100px;
 }
 .embla__slide {
   flex: 0 0 80%; /* Slide covers 80% of the viewport */
