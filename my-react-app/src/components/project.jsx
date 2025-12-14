@@ -4,7 +4,7 @@ import Autoplay from 'embla-carousel-autoplay'
 import './project.css'
 import photo1 from '../assets/home_icon.png'
  function RenderProjects() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()])
+  const [emblaRef] = useEmblaCarousel({ loop: true, axis:"y"}, [Autoplay()])
 
   const projectCard = [
     {
@@ -32,23 +32,27 @@ import photo1 from '../assets/home_icon.png'
 
 
   return (
+    <>
     <div className="embla2" ref={emblaRef}>
        <div className="embla__container2">
-            {projectCard.map((projects)=>{
+            {projectCard.map((projects)=>(
                 <div className="embla__slide2" key={projects.id}>
-                  <img 
-                                        
-                    src={projects.src} 
-                    alt={projects.alt} 
+                  <div className='project-card'>
+                    <img 
                                           
-                    />
+                      src={projects.src} 
+                      alt={projects.alt} 
+                                            
+                      />
+                    </div>
                   </div>
-              })
+            ))
             }
         
       </div>
  
     </div>
+  </>
   )
 }
 export default RenderProjects

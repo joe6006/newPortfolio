@@ -74,6 +74,7 @@ import Autoplay from 'embla-carousel-autoplay'
 
 
     return (
+        <>
                 <section  className="embla" ref={emblaRef}>
                    
                         
@@ -96,6 +97,7 @@ import Autoplay from 'embla-carousel-autoplay'
                    
                     
                 </section>
+                </>
             )  
 
 }
