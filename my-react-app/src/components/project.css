@@ -1,7 +1,7 @@
 /* Embla viewport */
 .embla2 {
   background-color: rgba(44, 41, 41, 0.712);
-  width: 41%;
+  width: 35%;
   height: 100%;
   z-index: 1;   
   color: white; 
@@ -41,13 +41,14 @@
 
 /* Project card styling */
 .project-card {
-  background: #f9f9f9;
+  background: #aa3434;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 16px;
   width: 80%; /* adjust width */
   text-align: center;
   transition: transform 0.3s ease;
+  gap: 5rem;
 }
 
 .project-card:hover {
