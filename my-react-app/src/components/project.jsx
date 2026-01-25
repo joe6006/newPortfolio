@@ -12,10 +12,10 @@ function RenderProjects() {
       id:1,
       src:photo1,
       alt:"project_name",
-      skills:"blah,blah",
-      url:"blah",
+      skills:"JS, JSX/JSON, CSS,",
+      url:"https://joe6006.github.io/scheduleapp/",
       github:"blah",
-      description:"This is project 1, showcasing the home icon."
+      description:"A schedule application using vanilla Javascript "
     },
     {
       id:2,
@@ -59,9 +59,9 @@ function RenderProjects() {
                 />
                   <div className="project-description">
                     <h2>project: {projects.alt}</h2>
-                    <p>Skills Applied: {projects.skills}</p>
-                    <p>website:<a>{projects.url}</a></p>
-                    <p>github:<a>{projects.github}</a></p>
+                    <p>Skills: {projects.skills}</p>
+                    <p>website:<a>{projects.url}</a> github:<a>{projects.github}</a></p>
+                    
                     <p>
                       Description: {projects.description}
                     </p>
