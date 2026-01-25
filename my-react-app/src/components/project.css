@@ -1,6 +1,6 @@
 /* Embla viewport */
 .embla2 {
-  background-color: rgba(44, 41, 41, 0.712);
+  background-color: rgba(44, 41, 41, 0.712); 
   width: 35%;
   height: 100%;
   z-index: 1;   
@@ -20,23 +20,25 @@
 }
 /* Embla container (vertical stack) */
 .embla__container2 {
-    display: flex;
+    display:inline-flex;
     flex-direction: column; /* vertical scrolling */
-    position: relative;
-    width: 95%;
-    height: 96%;
+   overflow-y: auto;
+    width: auto;
+    height: auto;
     border-radius: 5px;
     justify-content: center;
     padding: 10px;
+    background-color: black;
+    
 }
 
 /* Each slide */
 .embla__slide2 {
   flex: 0 0 auto; /* prevent shrinking */
-  height: 200px;  /* height of each slide */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: auto;  /* height of each slide */
+  
+  background-color: blue;
+  
 }
 
 /* Project card styling */
@@ -44,11 +46,12 @@
   background: #aa3434;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 16px;
-  width: 80%; /* adjust width */
+  width: 100%; /* adjust width */
   text-align: center;
-  transition: transform 0.3s ease;
-  gap: 5rem;
+  display: flex;
+  height: 10%;
+  
+
 }
 
 .project-card:hover {
@@ -57,7 +60,17 @@
 
 /* Image inside card */
 .project-card img {
-  max-height: 100%;
-  max-width: 100%;
+  height: auto;
+  width: 20%;
   object-fit: contain;
+}
+
+.project-description{
+  text-align:left;
+  position:relative;
+  margin-left:90px;
+  background-color: black;
+  width: 70%;
+  height: 0%;
+  
 }
