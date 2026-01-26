@@ -57,14 +57,17 @@ function RenderProjects() {
                   src={projects.src} 
                   alt={projects.alt} 
                 />
-                  <div className="project-description">
-                    <h2>project: {projects.alt}</h2>
-                    <p>Skills: {projects.skills}</p>
-                    <p>website:<a>{projects.url}</a> github:<a>{projects.github}</a></p>
-                    
-                    <p>
-                      Description: {projects.description}
-                    </p>
+                  <div className="project-description" >
+                    <ul className="project-list" >
+                      <li style={{listStyle:'none'}}>Project: {projects.alt}</li>
+                      <br/>
+                      <li style={{listStyle:'none'}}>Skills: {projects.skills}</li>
+                      <br/>
+                      <li style={{listStyle:'none'}}>Link: <a  target="_blank" href={projects.url} >Check it out!</a> / Github:<a href={projects.github}>Check out the repository!</a> </li>
+                      <br/>
+                      <li style={{listStyle:'none'}}>Description: {projects.description}</li>
+                    </ul>
+                   
                   </div>
               </div>
             </div>
@@ -76,3 +79,4 @@ function RenderProjects() {
 }
 
 export default RenderProjects
+
