@@ -1,6 +1,6 @@
 /* Embla viewport */
 .embla2 {
-  background-color: rgba(44, 41, 41, 0.712); 
+  background-color: rgba(29, 27, 27, 0.938); 
   width: 35%;
   height: 100%;
   z-index: 1;   
@@ -19,6 +19,7 @@
   -0em 0em 2em 1.8em rgb(14, 14, 13);
   overflow-y: auto;
 }
+
 /* Embla container (vertical stack) */
 .embla__container2 {
     display:flex;
@@ -29,52 +30,53 @@
     border-radius: 5px;
     justify-content: center;
     padding: 10px;
-    
-    
-}
+
+    }
 
 /* Each slide */
 .embla__slide2 {
   flex: 0 0 auto; /* prevent shrinking */
-  height: auto;  /* height of each slide */
-  
-  
-  
-}
+  height: auto;  /* height of each slide */  
+  }
 
 /* Project card styling */
-.project-card {
-  background: #aa3434;
+.project-card {  
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0px -1px 20px 2px  rgb(0, 0, 0);
   width: 100%; /* adjust width */
-  height: 250px;
+  height: 30vh;
   text-align: center;
-  display: flex;
- 
+  display: flex; 
 }
 
-.project-card:hover {
-  transform: scale(1.05);
-}
 
 /* Image inside card */
 .project-card img {
-  height: auto;
-  width: 20%;
-  object-fit: contain;
-  position: relative;
-  left: 5%;
+  padding:02%;
+  max-width: 35%;
+  max-height: 95%;
+  object-fit:cover;
 }
 
 .project-description{
   text-align:left;
-  background-color: black;
-  width:auto;
-  max-width: 67%;
+  width: auto;
+  height: auto;
+  max-width: 65%;
   max-height: 100%;
   border-left: solid white 2px;
-  margin-left: 70px;
-  padding-left: 10px; 
+  overflow: hidden;
+  white-space: wrap;
+}
+
+@font-face{
+    font-family:"myNeon";
+    src: url("../fonts/MiConv.com__neon.woff") format('woff');
+    font-weight:100;
   
+}
+span {
+  font-family: "myNeon";
+  font-weight: 100;
+  font-size: 2.5vh;
 }

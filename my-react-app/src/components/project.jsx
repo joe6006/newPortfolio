@@ -2,7 +2,9 @@ import React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import './project.css'
-import photo1 from '../assets/home_icon.png'
+import photo1 from '../assets/project_images/schedule.png'
+import photo2 from '../assets/project_images/password_generator.png'
+//import photo3 from '../assets/project_images/schedule'
 
 function RenderProjects() {
   const [emblaRef] = useEmblaCarousel({ loop: true, axis:"y"})
@@ -11,28 +13,27 @@ function RenderProjects() {
     {
       id:1,
       src:photo1,
-      alt:"project_name",
+      alt:"Schedule app" ,
       skills:"JS, JSX/JSON, CSS,",
       url:"https://joe6006.github.io/scheduleapp/",
-      github:"blah",
-      description:"A schedule application using vanilla Javascript "
+      github:"https://github.com/joe6006/scheduleapp",
+      description:"A schedule application using vanilla Javascript."
     },
     {
       id:2,
-      src:photo1,
-      alt:"project_name",
-      skills:"blah,blah",
-      url:"blah",
-      github:"blah",
-      description:"This is project 2, another variation of the home icon."
+      src:photo2,
+      alt:"Password Generator",
+      skills:"JS, Manipulating Arrays",
+      url:"https://joe6006.github.io/generatePassword/",
+      github:"https://github.com/joe6006/generatePassword",
+      description:"Simple password gen."
     },
     {
       id:3,
       src:photo1,
-      alt:"project_name",
-      skills:"blah,blah",
-      url:"blah",
-      github:"blah",
+      alt:"My Web Portfolio",
+      skills:"REACT.JS, Embla carousel API,CSS",
+      github:"https://github.com/joe6006/newPortfolio",
       description:"This is project 3, demonstrating carousel functionality."
     },
     {
@@ -59,13 +60,13 @@ function RenderProjects() {
                 />
                   <div className="project-description" >
                     <ul className="project-list" >
-                      <li style={{listStyle:'none'}}>Project: {projects.alt}</li>
+                      <li style={{listStyle:'none'}}><span>Project:</span> {projects.alt}</li>
                       <br/>
-                      <li style={{listStyle:'none'}}>Skills: {projects.skills}</li>
+                      <li style={{listStyle:'none'}}><span>Skills:</span> {projects.skills}</li>
                       <br/>
-                      <li style={{listStyle:'none'}}>Link: <a  target="_blank" href={projects.url} >Check it out!</a> / Github:<a href={projects.github}>Check out the repository!</a> </li>
+                      <li style={{listStyle:'none'}}><span>Link:</span> <a  target="_blank" href={projects.url} >Check it out!</a> / Github:<a href={projects.github}>Check out the repository!</a> </li>
                       <br/>
-                      <li style={{listStyle:'none'}}>Description: {projects.description}</li>
+                      <li style={{listStyle:'none'}}><span>Description:</span> {projects.description}</li>
                     </ul>
                    
                   </div>
