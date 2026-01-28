@@ -4,7 +4,7 @@ import Autoplay from 'embla-carousel-autoplay'
 import './project.css'
 import photo1 from '../assets/project_images/schedule.png'
 import photo2 from '../assets/project_images/password_generator.png'
-//import photo3 from '../assets/project_images/schedule'
+import photo3 from '../assets/project_images/climb.jpg'
 
 function RenderProjects() {
   const [emblaRef] = useEmblaCarousel({ loop: true, axis:"y"})
@@ -30,21 +30,13 @@ function RenderProjects() {
     },
     {
       id:3,
-      src:photo1,
+      src:photo3,
       alt:"My Web Portfolio",
       skills:"REACT.JS, Embla carousel API,CSS",
       github:"https://github.com/joe6006/newPortfolio",
       description:"This is project 3, demonstrating carousel functionality."
     },
-    {
-      id:4,
-      src:photo1,
-      alt:"project_name",
-      skills:"blah,blah",
-      url:"blah",
-      github:"blah",
-      description:"This is project 4, with looping enabled."
-    }
+    
   ]
 
   return (
