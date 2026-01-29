@@ -34,7 +34,7 @@ function RenderProjects() {
       alt:"My Web Portfolio",
       skills:"REACT.JS, Embla carousel API,CSS",
       github:"https://github.com/joe6006/newPortfolio",
-      description:"This is project 3, demonstrating carousel functionality."
+      description:"This portfolio will be changed depending on what gane I am currently playing. It will also become a full-stack website as I continue to learn more about software development"
     },
     
   ]
@@ -56,7 +56,7 @@ function RenderProjects() {
                       <br/>
                       <li style={{listStyle:'none'}}><span>Skills:</span> {projects.skills}</li>
                       <br/>
-                      <li style={{listStyle:'none'}}><span>Link:</span> <a  target="_blank" href={projects.url} >Check it out!</a> / Github:<a href={projects.github}>Check out the repository!</a> </li>
+                      <li style={{listStyle:'none'}}><span>Link:</span> <a  target="_blank" href={projects.url} >Check it out!</a>/<span>Github</span>:<a href={projects.github}>Check out the repository!</a> </li>
                       <br/>
                       <li style={{listStyle:'none'}}><span>Description:</span> {projects.description}</li>
                     </ul>

@@ -52,7 +52,7 @@
 
 /* Image inside card */
 .project-card img {
-  padding:02%;
+  padding:2%;
   max-width: 35%;
   max-height: 95%;
   object-fit:cover;
@@ -68,6 +68,8 @@
   border-left: solid white 2px;
   overflow: hidden;
   white-space: wrap;
+  line-height: 20px;
+  
 }
 
 @font-face{

@@ -19,7 +19,12 @@ const App = () => {
       }else{setactivesection(section)}
       
   }
+   const myFunction =(contact) =>{
 
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(contact);
+        console.log("copy saved!")
+    }
 
   return (
     <>
@@ -33,6 +38,10 @@ const App = () => {
           >
             Joseph Hill
           </h1>
+          <div className='contact'>
+          <h2>EMAIL:<a onClick={()=>myFunction('joe.h.155@proton.me')}> joe.h.155@proton.me</a></h2>
+          <h2>PHONE: <a onClick={()=>myFunction('(726)242-2713')}>(726)242-2713</a></h2>
+          </div>
         </header>
         <div className="button-list">
           <button onClick={() => handleClick('about') }>About Me</button>

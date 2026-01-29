@@ -27,8 +27,14 @@ background-color: rgba(44, 41, 41, 0.712);
   border-radius: 5px;
   justify-content: center;
   padding: 10px;
- 
-  
+  display: block;  
+}
+.education>h1{
+  text-decoration: underline rgba(39, 132, 238, 0.877);
+
+}
+.education>ul{
+  text-align: left;
 }
 @font-face{
     font-family:"myNeon";
