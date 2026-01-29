@@ -35,7 +35,6 @@ const App = () => {
         <header>
           <h1
             className="logo"
-            style={{ fontWeight: 200 }}
           >
             Joseph Hill
           </h1>
