@@ -28,7 +28,8 @@ const App = () => {
 
   return (
     <>
-      {RenderPhotos()}
+      <div className='photos-desktop-only'>{RenderPhotos()}</div>
+      
       <div className="overlay"></div>
       <div className="nav-bar">
         <header>
@@ -52,7 +53,8 @@ const App = () => {
       {activesection === 'about' && <RenderAboutMe/>}
       {activesection ==='skills'&& <RenderSkills />}
       {activesection === 'projects' && <RenderProjects />}
-      <SiteList />
+      <div className='thesites'><SiteList/></div>
+      
     </>
   );
 };
