@@ -27,36 +27,49 @@ const App = () => {
     }
 
   return (
-    <>
-      <div className='photos-desktop-only'>{RenderPhotos()}</div>
-      
-      <div className="overlay"></div>
-      <div className="nav-bar">
-        <header>
-          <h1
-            className="logo"
-          >
-            Joseph Hill
-          </h1>
-          <div className='contact'>
+  <>
+    {RenderPhotos()}
+    <div className="overlay"></div>
+
+    <div className="nav-bar">
+      <header>
+        <h1 className="logo" style={{ fontWeight: 200 }}>Joseph Hill</h1>
+        <div className="contact">
           <h2>EMAIL:<a onClick={()=>myFunction('joe.h.155@proton.me')}> joe.h.155@proton.me</a></h2>
-          <h2>PHONE: <a onClick={()=>myFunction('(726)242-2713')}>(726)242-2713</a></h2>
-          </div>
-        </header>
-        <div className="button-list">
-          <button onClick={() => handleClick('about') }>About Me</button>
-          <button onClick={() => handleClick('skills')}>Skills</button>
-          <button onClick={() => handleClick('projects')}>Projects</button>
+          <h2>PHONE:<a onClick={()=>myFunction('(726)242-2713')}>(726)242-2713</a></h2>
         </div>
+      </header>
+
+      <div className="button-list">
+        <button onClick={() => handleClick('about')}>About Me</button>
+        <button onClick={() => handleClick('skills')}>Skills</button>
+        <button onClick={() => handleClick('projects')}>Projects</button>
       </div>
-      {activesection === 'about' && <RenderAboutMe/>}
-      {activesection ==='skills'&& <RenderSkills />}
-      {activesection === 'projects' && <RenderProjects />}
-      <div className='thesites'><SiteList/></div>
+
+      {/* ⭐ NEW WRAPPER */}
+      <div className="mobile-content-slot">
+        {activesection === 'about' && <RenderAboutMe handleClick={handleClick}/>}
+        {activesection === 'skills' && <RenderSkills handleClick={handleClick}/>}
+        {activesection === 'projects' && <RenderProjects />}
+          
+      </div>
       
-    </>
-  );
-};
+    </div>
+    
+    {/* Desktop content stays outside */}
+    <div className="desktop-content">
+      {activesection === 'about' && <RenderAboutMe />}
+      {activesection === 'skills' && <RenderSkills />}
+      {activesection === 'projects' && <RenderProjects />}
+        
+    </div>
+    <SiteList className="sites" />
+   
+  </>
+);
+
+
+ };
 
 export default App;
 

@@ -22,11 +22,12 @@
   height: 7vh;
 }
 
+
 @media (max-width: 1024px){
     .site-container{
                  position:relative;
                   display: inline-flex; 
-                  top: 21vh;
+                  top: 10vh;
                   flex-direction: row; 
                   align-items: center; 
                   justify-content: center; 
@@ -35,8 +36,6 @@
                   width: 50vw;
                   gap: 15%;
                   border:none;
-                  
-                  
                   
     }
 }

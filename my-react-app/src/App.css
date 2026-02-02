@@ -87,6 +87,18 @@
   .photos-desktop-only {
      display: none !important; 
     } 
+    .mobile-content-slot { 
+      display: block; 
+      width: 100%; 
+      margin-top: 1rem; 
+      padding: 1rem; 
+      color: var(--text-soft);
+     } 
+     
+     /* Hide desktop content on mobile */ 
+    .desktop-content { 
+      display: none !important; 
+    }
    
     :root { 
       --bg-ice: #eaf6fb; 
@@ -100,7 +112,7 @@
        background-position: center;
       background-size: cover;     
       background-repeat: no-repeat;
-     background-image: none;
+      background-image: none;
       position: fixed;
         overflow-y: hidden;
       
@@ -127,14 +139,12 @@
 
        
         .nav-bar header { 
-          display: flex;
+          display: fixed;
           flex-direction: column; 
           align-items: center; 
           width: 100%;
-          height: 20%;
-          
-          
-         
+          height: 5%;
+          padding-bottom: 8rem;
         } 
 
           .logo { 
@@ -161,11 +171,14 @@
 
             .button-list { 
               flex-direction: column; 
-              gap: 1.6rem; 
+              gap: 2.6rem; 
               justify-content: center; 
               margin-top: 0.6rem; 
               flex-wrap: wrap; 
               width: 56%;
+            }
+            .sites-mobile{
+              display: none !important;
             }
 
              .button-list button { 
@@ -178,17 +191,6 @@
                 font-size: 0.95rem; 
                 box-shadow: 0 6px 18px rgba(10,20,18,0.45); }
                 
-               .thesites { 
-                  margin-left: 0; 
-                  margin-top: 18vh;
-                  display: flex; 
-                  flex-direction: column; 
-                  align-items: center; 
-                  justify-content: center; 
-                  padding: 1rem; 
-                  color: var(--text-soft); 
-              } 
-              
               
                .overlay { 
                 background: linear-gradient(180deg, rgba(6,10,12,0.55), rgba(6,10,12,0.65)); 
@@ -197,33 +199,7 @@
 }
 
 /* Mobile devices */
-@media (max-width: 768px) {
 
- .logo { 
-  font-size: 1.4rem; margin-top: 0.2rem; 
-  color: var(--accent-ice); 
-  text-align: center;
- } 
-
-  .card, .card-container, .skills {
-
-     width: 94%; 
-     margin: 14vh auto 2rem auto; 
-    
-     display: block; text-align: center; 
-     background: rgba(12,18,16,0.35); 
-     border-radius: 12px; padding: 1rem; 
-     box-shadow: 0 8px 24px rgba(6,10,8,0.5); 
-     color: var(--text-soft); 
-    } 
-     
- 
-   .button-list button { 
-
-      padding: 0.8rem 1rem; 
-      min-width: 120px; 
-  }
-}
 
 /* Extra small screens */
 @media (max-width: 480px) {

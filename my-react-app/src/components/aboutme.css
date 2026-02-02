@@ -66,7 +66,7 @@
       font-weight:100;
       font-family: "myNeon";
       padding-left: 10px;
-    position: fixed;
+      position: fixed;
       font-size: 80px;
     }
     .aboutme-container>p{
@@ -74,61 +74,91 @@
       width:100%;
     
     }
-
-    @media (max-width: 1024px){
-        .aboutme-background{
-            background-color: rgba(44, 41, 41, 0.712);
-            width: 70vw;
-            max-height: 30vh;
-            z-index: 2;   
-            color: white; 
-            position:fixed;
-            
-            justify-content: center;
-            align-items: center;
-            display: inline-block;
-            border-radius: 2px;
-            box-shadow:
-            0px 0px 15px rgba(39, 132, 238, 0.877),
-            -0em 0em 2em 1.8em rgb(14, 14, 13);
+    
+    .close-btn{
+      display: none;
     }
-
-    .aboutme-container{
+   
+    @media (max-width: 1024px) { 
+      /* Full-screen overlay above nav + buttons */ 
       
-          background-color: rgba(26, 24, 24, 0.664);
-          position: relative;
-          width: auto;
-          height: auto;
-          display: flex;
-          top: 10%;
-          border-radius: 5px;
-          justify-content: center;
-          padding: 10px;
-          display: block;  
-    }
-    .education>h1{
-        text-decoration: underline rgba(39, 132, 238, 0.877);
-
-    }
-    .education>ul{
-        text-align: left;
-    }
-    .head{
+      .aboutme-background { 
+        position: fixed; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        width: 83%; 
+        max-width: 450px; 
+        max-height: 50vh; 
+        padding: 1rem; 
+        border-radius: 12px; 
+        background: linear-gradient( 180deg, rgba(10, 20, 18, 0.96), rgba(6, 12, 12, 0.98) ); 
+        box-shadow: 0 12px 30px rgba(0,0,0,0.7); 
+        overflow-y: auto;  
+        z-index: 999; 
+        display: block; 
+        margin: 0; 
+        border: solid 1px;
+        border-color: var(--accent-ice);
+       
+      } 
         
-        display: none;
-    }
+        .aboutme-container {
+           width: 100%; 
+           height: auto; 
+           padding: 0; 
+           border-radius: 10px; 
+           background: rgba(255,255,255,0.04); 
+           border: 1px solid rgba(255,255,255,0.08); 
+           overflow-y: visible; 
+           overflow-x: none;
 
+          } 
+          /* Hide desktop header bar */ 
+          .head, .head > h2 { display: none; } 
+          
+          .aboutme-container > p { 
+            padding-left: 0.2rem; 
+            font-size: 1rem; 
+            line-height: 2.5; 
+            color: var(--text-soft); 
+            margin-top: 0.5rem; 
+          } 
 
-      .head>h2{
-        font-weight:100;
-        font-family: "myNeon";
-        padding-left: 10px;
-        position: fixed;
-        font-size: 80px;
-      }
-      .aboutme-container>p{
-        text-align: left;
-        width:100%;
-      }
+            .education > h1 { 
+              font-size: 1.4rem; 
+              text-align: center; 
+              text-decoration-color: var(--accent-ice); 
+            } 
 
-    }
+            .education > ul {
+               padding-left: 2rem; 
+               font-size: 1rem; 
+               color: var(--text-soft); 
+               
+              } 
+
+              .close-btn { 
+                position: sticky; 
+                  top: 0; 
+                right: 0; 
+                margin-left: auto;
+                 margin-bottom: 0.5rem; 
+                 width: 42px; 
+                 height: 42px; 
+                 border-radius: 50%; 
+                 background: rgba(20, 19, 19, 0.856); 
+                 border: 1px solid rgba(255,255,255,0.15); 
+                 color: var(--accent-ice); 
+                 font-size: 1.6rem; 
+                 font-weight: bold; 
+                 display: flex; 
+                 align-items: center; 
+                 justify-content: center; 
+                 cursor: pointer; 
+                 z-index: 9999; 
+                
+                } 
+              }
+     
+    

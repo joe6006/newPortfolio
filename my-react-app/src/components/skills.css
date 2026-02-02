@@ -12,7 +12,6 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  border: white 1px solid;
   border-radius: 2px;
   box-shadow:
   0px 0px 15px rgba(39, 132, 238, 0.877),
@@ -58,3 +57,83 @@ ul>li{
     
 }
 
+ .close-btn{
+      display: none;
+    }
+@media (max-width: 1024px) {
+
+  /* Turn the skills panel into a centered modal */
+  .skills-list {
+    position: fixed; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        width: 85%; 
+        max-width: 450px; 
+        max-height: 50vh; 
+        padding: 1rem; 
+        border-radius: 12px; 
+        background: linear-gradient( 180deg, rgba(10, 20, 18, 0.96), rgba(6, 12, 12, 0.98) ); 
+        box-shadow: 0 12px 30px rgba(0,0,0,0.7); 
+        overflow-y: auto; /* scroll inside the box */ 
+        z-index: 999; /* above nav-bar */ 
+        display: block; 
+        margin: 0; 
+        border-color: var(--accent-ice);
+  }
+
+ 
+  .head {
+    display: none;
+  }
+
+  .skillsTitle {
+    display: none;
+  }
+
+  /* Inner content area */
+  .ul-div {
+            width: 100%; 
+           height: auto; 
+           padding: 0; 
+           border-radius: 10px; 
+           background: rgba(255,255,255,0.04); 
+           border: 1px solid rgba(255,255,255,0.08); 
+           overflow-y: visible; 
+           overflow-x: none;
+  }
+
+  .ul-div > ul {
+               padding-left: 2rem; 
+               font-size: 1rem; 
+               color: var(--text-soft); 
+  }
+
+  ul > li {
+    margin-bottom: 0.5rem;
+    list-style-type: circle;
+    font-family: 'myMedium';
+  }
+
+  /* Sticky close button */
+  .close-btn {
+                 position: sticky; 
+                  top: 0; 
+                right: 0; 
+                margin-left: auto;
+                 margin-bottom: 0.5rem; 
+                 width: 42px; 
+                 height: 42px; 
+                 border-radius: 50%; 
+                 background: rgba(20, 19, 19, 0.856); 
+                 border: 1px solid rgba(255,255,255,0.15); 
+                 color: var(--accent-ice); 
+                 font-size: 1.6rem; 
+                 font-weight: bold; 
+                 display: flex; 
+                 align-items: center; 
+                 justify-content: center; 
+                 cursor: pointer; 
+                 z-index: 9999; 
+  }
+}

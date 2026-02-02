@@ -1,7 +1,8 @@
 import { useState } from "react";
 import './skills.css';
 
-const renderSkills = ()=>{
+const 
+RenderSkills = ({ handleClick })=>{
     const [skills, setSkills] = useState(false);
 
 
@@ -9,18 +10,21 @@ const renderSkills = ()=>{
         <div className='skills'>
         
             <div className="skills-list">
+                 <div className="close-btn" onClick={() => handleClick(null)}>
+                    ✕
+        </div>
                 <header className="head">
                     <h2 className='skillsTitle'>skills</h2>
                 </header>
-            <div className="ul-div">
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>React</li>
+                <div className="ul-div">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>React</li>
                     
-                </ul>
-           </div>
+                    </ul>
+             </div>
             </div>
          
     </div>
@@ -28,4 +32,4 @@ const renderSkills = ()=>{
 
 }
 
-export default renderSkills
+export default RenderSkills
