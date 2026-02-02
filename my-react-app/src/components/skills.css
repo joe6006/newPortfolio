@@ -60,7 +60,7 @@ ul>li{
  .close-btn{
       display: none;
     }
-@media (max-width: 1024px) {
+@media (max-width: 480px) {
 
   /* Turn the skills panel into a centered modal */
   .skills-list {
@@ -70,7 +70,7 @@ ul>li{
         transform: translate(-50%, -50%); 
         width: 85%; 
         max-width: 450px; 
-        max-height: 50vh; 
+        max-height: 50%; 
         padding: 1rem; 
         border-radius: 12px; 
         background: linear-gradient( 180deg, rgba(10, 20, 18, 0.96), rgba(6, 12, 12, 0.98) ); 
@@ -83,14 +83,11 @@ ul>li{
   }
 
  
-  .head {
-    display: none;
+  .head,.skillsTitle {
+    display: none !important;
   }
 
-  .skillsTitle {
-    display: none;
-  }
-
+  
   /* Inner content area */
   .ul-div {
             width: 100%; 
@@ -119,9 +116,10 @@ ul>li{
   .close-btn {
                  position: sticky; 
                   top: 0; 
-                right: 0; 
+                  right: 0; 
+                
                 margin-left: auto;
-                 margin-bottom: 0.5rem; 
+                 margin-bottom: .5rem; 
                  width: 42px; 
                  height: 42px; 
                  border-radius: 50%; 

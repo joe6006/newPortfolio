@@ -74,151 +74,179 @@
 
 
 
-
+.profile-block ,.mobile-only{
+  display: none !important;
+}
 
 
 
 
 /* 📱 Responsive Media Queries */
 
-/* Tablets and smaller */
-@media (max-width: 1024px) {
-  /* Hide RenderPhotos on tablet and smaller */ 
-  .photos-desktop-only {
-     display: none !important; 
-    } 
-    .mobile-content-slot { 
-      display: block; 
-      width: 100%; 
-      margin-top: 1rem; 
-      padding: 1rem; 
-      color: var(--text-soft);
-     } 
-     
-     /* Hide desktop content on mobile */ 
-    .desktop-content { 
-      display: none !important; 
-    }
-   
-    :root { 
-      --bg-ice: #eaf6fb; 
-      --mist: rgba(220,230,235,0.6); 
-      --forest-deep: #0f2a20; 
-      --forest-mid: #234b3b; 
-      --accent-ice: #9fd7ff; 
-      --text-soft: #e9f6f8; 
-      max-width: 100%;
-      max-height:100%;
-       background-position: center;
-      background-size: cover;     
-      background-repeat: no-repeat;
-      background-image: none;
-      position: fixed;
-        overflow-y: hidden;
-      
-      } 
-      
-      
-      .nav-bar {
-        overflow-y: none;
-         width: 100%;
-         height: 100%;
-         position: fixed;
-         top: 0; 
-         left: 0; 
-         padding: 1rem 0; 
-         display: flex; 
-         flex-direction: column; 
-         align-items: center; 
-         gap: 0.6rem; 
-         background: linear-gradient(180deg, rgba(6, 10, 12, 0.842), rgba(18, 30, 26, 0.877),rgb(6, 10, 12, 0.993)); 
-         border-right: none; 
-         border-bottom: 1px solid rgba(255,255,255,0.06); 
-         z-index: 2;
-        } 
-
-       
-        .nav-bar header { 
-          display: fixed;
-          flex-direction: column; 
-          align-items: center; 
-          width: 100%;
-          height: 5%;
-          padding-bottom: 8rem;
-        } 
-
-          .logo { 
-            
-            height: 100%;
-            width: 100%;
-            text-size-adjust: 250%;
-            color: var(--accent-ice); 
-            letter-spacing: 8.5px; 
-            
-           } 
-
-           /* Contact links */ 
-           .contact h2 { 
-            font-size: 1.1rem; 
-             
-            color: var(--text-soft);
-           } 
-           .contact a {
-             color: var(--accent-ice); 
-             text-decoration: none;
-              cursor: pointer; 
-            } 
-
-            .button-list { 
-              flex-direction: column; 
-              gap: 2.6rem; 
-              justify-content: center; 
-              margin-top: 0.6rem; 
-              flex-wrap: wrap; 
-              width: 56%;
-            }
-            .sites-mobile{
-              display: none !important;
-            }
-
-             .button-list button { 
-                
-                padding: 0.6rem 0.9rem;
-                border-radius: 10px; 
-                background: linear-gradient(180deg, rgba(40,70,60,0.95), rgba(20,40,34,0.95));
-                color: var(--text-soft); border: 1px solid rgba(255,255,255,0.04); 
-                font-weight: 600; 
-                font-size: 0.95rem; 
-                box-shadow: 0 6px 18px rgba(10,20,18,0.45); }
-                
-              
-               .overlay { 
-                background: linear-gradient(180deg, rgba(6,10,12,0.55), rgba(6,10,12,0.65)); 
-                
-              }
-}
-
-/* Mobile devices */
-
-
-/* Extra small screens */
+/*phone samsung and iphone*/
 @media (max-width: 480px) {
-  #root {
+
+  /* safe global box sizing */
+  html, body {
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+  .photos-desktop-only { display: none !important; }
+
+  .mobile-content-slot {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
     padding: 1rem;
+    color: var(--text-soft);
   }
 
+  .desktop-content { display: none !important; }
+
+  
+
+  :root {
+    --bg-ice: #eaf6fb;
+    --mist: rgba(220,230,235,0.6);
+    --forest-deep: #0f2a20;
+    --forest-mid: #234b3b;
+    --accent-ice: #9fd7ff;
+    --text-soft: #e9f6f8;
+    --profile-size-mobile: clamp(100px, 36vw, 120px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: none;
+    position: static;
+    overflow: none;
+    width: 101%;
+  }
+
+
+     
+
+     .mobile-only { display: flex !important; } 
+
+     .profile-block { 
+      margin-bottom: -30px; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      width: 100%; 
+      box-sizing: border-box;
+    } 
+    .profile-block .logo { 
+      margin-top: 0.25rem; 
+      font-size: clamp(1rem, 4.5vw, 1.2rem); 
+    } 
+  
+      .profile-avatar { 
+        width: var(--profile-size-mobile); 
+        height: var(--profile-size-mobile); 
+        border-radius: 50%; 
+        object-fit: cover; 
+        display: block; 
+        border: 2px solid rgba(255,255,255,0.08); 
+        box-shadow: 0 6px 18px rgba(0,0,0,0.35); 
+      background-color: rgba(255,255,255,0.04); 
+    }
+  /* Nav constrained tomaximum height so Samsung doesn't blow up */
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 101%;
+    /* Use dynamic viewport but cap it so very tall screens don't scale everything */
+    height: min(100dvh, 820px);
+    /* respect device safe areas */
+    padding-top: calc(env(safe-area-inset-top, 16px) + 1rem);
+    padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 1rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(
+      180deg,
+      rgba(6, 10, 12, 0.842),
+      rgba(18, 30, 26, 0.877),
+      rgba(6, 10, 12, 0.993)
+    );
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  
+  .nav-bar header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-bottom: clamp(1.5rem, 6vw, 3.5rem);
+    gap: 0px;
+  }
+
+  
   .logo {
-    padding: 5px;
-    font-size: 1.2rem;
+    width: 100%;
+    color: var(--accent-ice);
+    letter-spacing: 9.5px;
+    padding-bottom: 0;
+    font-size: clamp(2.5rem, 4.5vw, 1.2rem);
+    text-align: center;
+    -webkit-text-size-adjust: 100%;
   }
 
-  .card {
-    font-size: 1em;
-    padding: 15px;
+  .contact h2 {
+    font-size: clamp(0.95rem, 10.5vw, 1.1rem);
+    color: var(--text-soft);
+    margin-top: -20px;
   }
 
-  .skillsTitle {
-    font-size: 1rem;
+  .contact a {
+    color: var(--accent-ice);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* keep button list centered but limit its max width so Samsung doesn't stretch it */
+  .button-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3.2rem, 4.5vw, 4.6rem);
+    justify-content: center;
+    margin-top: -5rem;
+    width: min(56%, 420px);
+  }
+
+  .button-list button {
+    padding: 0.6rem 1.9rem;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(40,70,60,0.95), rgba(20,40,34,0.95));
+    color: var(--text-soft);
+    border: 1px solid rgba(255,255,255,0.04);
+    font-weight: 600;
+    font-size: clamp(0.85rem, 2.6vw, 0.95rem);
+    box-shadow: 0 6px 18px rgba(10,20,18,0.45);
+  }
+
+  .sites-mobile { display: none !important; }
+
+  .overlay {
+    display: none !important;
   }
 }
+  
+ 
+
+
+
+
+
 

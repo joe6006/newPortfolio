@@ -7,7 +7,7 @@ import RenderProjects from './components/project';
 import RenderAboutMe from './components/aboutme';
 import RenderSkills from './components/skills';
 import RenderPhotos from './components/gamePics';
-
+import picme from './assets/mepic.JPG'
 const App = () => {
  const [activesection , setactivesection] = useState(null);
 
@@ -28,15 +28,22 @@ const App = () => {
 
   return (
   <>
-    {RenderPhotos()}
+   
     <div className="overlay"></div>
-
+    
     <div className="nav-bar">
+      <div class="profile-block mobile-only"> 
+        <img 
+        src={picme} 
+        alt="Profile photo" 
+        class="profile-avatar" 
+        /> 
+      </div>
       <header>
         <h1 className="logo" style={{ fontWeight: 200 }}>Joseph Hill</h1>
         <div className="contact">
-          <h2>EMAIL:<a onClick={()=>myFunction('joe.h.155@proton.me')}> joe.h.155@proton.me</a></h2>
-          <h2>PHONE:<a onClick={()=>myFunction('(726)242-2713')}>(726)242-2713</a></h2>
+          <h2>EMAIL:<a onClick={()=>myFunction('joe.h.155@proton.me')}>  joe.h.155@proton.me</a></h2>
+          <h2>PHONE:<a onClick={()=>myFunction('(726)242-2713')}>   (726)242-2713</a></h2>
         </div>
       </header>
 
@@ -61,6 +68,7 @@ const App = () => {
       {activesection === 'about' && <RenderAboutMe />}
       {activesection === 'skills' && <RenderSkills />}
       {activesection === 'projects' && <RenderProjects />}
+      {RenderPhotos()}
         
     </div>
     <SiteList className="sites" />

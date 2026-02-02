@@ -79,7 +79,7 @@
       display: none;
     }
    
-    @media (max-width: 1024px) { 
+    @media (max-width: 480px) { 
       /* Full-screen overlay above nav + buttons */ 
       
       .aboutme-background { 
@@ -89,8 +89,9 @@
         transform: translate(-50%, -50%); 
         width: 83%; 
         max-width: 450px; 
-        max-height: 50vh; 
+        max-height: 60vh; 
         padding: 1rem; 
+        
         border-radius: 12px; 
         background: linear-gradient( 180deg, rgba(10, 20, 18, 0.96), rgba(6, 12, 12, 0.98) ); 
         box-shadow: 0 12px 30px rgba(0,0,0,0.7); 
@@ -140,7 +141,7 @@
 
               .close-btn { 
                 position: sticky; 
-                  top: 0; 
+                  top: 20; 
                 right: 0; 
                 margin-left: auto;
                  margin-bottom: 0.5rem; 

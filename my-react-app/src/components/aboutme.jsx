@@ -19,11 +19,11 @@ const RenderAboutMe = ({ handleClick }) => {
                     <h2>About me</h2>
                 </div>
 
-                
-                <div className='aboutme-container'>
-                    <div className="close-btn" onClick={() => handleClick(null)}>
+                <div className="close-btn" onClick={() => handleClick(null)}>
                     ✕
                 </div>
+                
+                <div className='aboutme-container'>
 
                    
                     <p>
