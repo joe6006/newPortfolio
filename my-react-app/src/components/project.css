@@ -1,81 +1,55 @@
 /* Embla viewport */
-.embla2 {
-  background-color: rgba(29, 27, 27, 0.938); 
+/* DESKTOP ONLY */
+.desktop-only .embla2 {
+  background-color: rgba(29, 27, 27, 0.938);
   width: 36%;
   height: 100%;
-  z-index: 1;   
-  color: white; 
-  position:fixed;
-  left:21vw;
-  bottom: 0vh;
-  top: 0vh;
-  justify-content: center;
-  align-items: center;
+  z-index: 2;
+  color: white;
+  position: fixed;
+  left: 21vw;
+  bottom: 0;
+  top: 0;
   display: inline-block;
   border-radius: 2px;
   box-shadow:
-  0px 0px 15px rgba(39, 132, 238, 0.877),
-  -0em 0em 2em 1.8em rgb(14, 14, 13);
+    0px 0px 15px rgba(39, 132, 238, 0.877),
+    -0em 0em 2em 1.8em rgb(14, 14, 13);
   overflow-y: auto;
 }
 
-/* Embla container (vertical stack) */
-.embla__container2 {
-    display:flex;
-    flex-direction: column; /* vertical scrolling */
-    gap: 40px;
-    width: auto;
-    height: auto;
-    border-radius: 5px;
-    justify-content: center;
-    padding: 10px;
-
-    }
-
-/* Each slide */
-.embla__slide2 {
-  flex: 0 0 auto; /* prevent shrinking */
-  height: auto;  /* height of each slide */  
-  }
-
-/* Project card styling */
-.project-card {  
-  border-radius: 12px;
-  box-shadow: 0px -1px 20px 2px  rgb(0, 0, 0);
-  width: 100%; /* adjust width */
-  height: 35vh;
-  text-align: center;
-  display: flex; 
+.desktop-only .embla__container2 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 10px;
 }
 
+.desktop-only .embla__slide2 {
+  flex: 0 0 auto;
+}
 
-/* Image inside card */
-.project-card img {
-  padding:2%;
+.desktop-only .project-card {
+  border-radius: 12px;
+  box-shadow: 0px -1px 20px 2px rgb(0, 0, 0);
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  text-align: center;
+}
+
+.desktop-only .project-card img {
+  padding: 2%;
   max-width: 35%;
   max-height: 95%;
-  object-fit:cover;
+  object-fit: cover;
   border-radius: 9%;
 }
 
-.project-description{
-  text-align:left;
-  width: auto;
-  height: auto;
-  max-width: 65%;
-  max-height: 100%;
-  border-left: solid white 2px;
-  overflow: hidden;
-  white-space: wrap;
-  line-height: 20px;
-  
-}
-
-@font-face{
-    font-family:"myNeon";
-    src: url("../fonts/MiConv.com__neon.woff") format('woff');
-    font-weight:100;
-  
+@font-face {
+  font-family: "myNeon";
+  src: url("../fonts/MiConv.com__neon.woff") format("woff");
+  font-weight: 100;
 }
 span {
   font-family: "myNeon";
@@ -83,36 +57,123 @@ span {
   font-size: 2.5vh;
 }
 
-@media (max-width:480px){
-  .embla2 {
-  background-color: rgba(29, 27, 27, 0.938); 
-  width: 36%;
-  height: 100%;
-  z-index: 1;   
-  color: white; 
-  position:fixed;
-  left:21vw;
-  bottom: 0vh;
-  top: 0vh;
-  justify-content: center;
-  align-items: center;
-  display: inline-block;
-  border-radius: 2px;
-  box-shadow:
-  0px 0px 15px rgba(39, 132, 238, 0.877),
-  -0em 0em 2em 1.8em rgb(14, 14, 13);
-  overflow-y: auto;
-}
-.embla__container2 {
-    display:flex;
-    flex-direction: row; 
-    gap: 40px;
-    width: auto;
-    height: auto;
-    border-radius: 5px;
+/* Small-screen height adjustments */
+
+@media (max-width: 480px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: block !important;
+    
+  } 
+  
+  /* MOBILE MODAL SHELL */
+  .embla2-mobile {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(env(safe-area-inset-bottom, 12px) + 1.9rem);
+    width: min(92%, 480px);
+    height: calc(100dvh - (env(safe-area-inset-bottom, 12px) + 3.6rem));
+    background-color: rgba(29, 27, 27, 0.986);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    overflow: hidden;
+    z-index: 3; 
+  }
+  
+  /* MOBILE VIEWPORT (SCROLLS) */
+  .embla__viewport2-mobile {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 3;
+    
+  } 
+  
+  /* MOBILE CONTAINER */
+  .embla__container2-mobile {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    padding: 0;
+    
+    
+  }
+
+  .embla__slide2-mobile {
+    flex: 0 0 auto;
+    width: 100%;
+  } 
+  /* MOBILE CARD */
+
+  .project-card.mobile {
+    z-index: 3;
+    margin-left: 2rem;
+    width: 80%;
+    padding: .8rem;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    
+  }
+
+  .card-image {
+    width: 62%;
+    max-height: 30vh;
+    object-fit: contain;
+    border-radius: 8%;
+    margin-bottom: 0.6rem;
+  }
+  .card-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .card-title h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: white;
+  }
+  .details {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
     justify-content: center;
-    padding: 10px;
-
-    }
-
+    padding: 0;
+    margin: 0.2rem 0;
+  }
+  .detail-item {
+    background: rgba(27, 26, 26, 0.9);
+    padding: 0.4rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: white;
+  }
+  .details-divider {
+    width: 90%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0.4rem auto;
+  }
+  .project-info {
+    width: 100%;
+    text-align: center;
+  }
+  .project-description-text {
+    font-size: 0.9rem;
+    color: #e6e6e6;
+  }
 }

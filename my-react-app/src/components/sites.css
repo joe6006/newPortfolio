@@ -14,7 +14,7 @@
  border-bottom-color: rgb(124, 201, 224) ;
   border-left:solid;
  border-left-color: rgb(124, 201, 224) ;
- z-index: 2;
+ z-index: 1;
 }
 
 .img{
@@ -41,7 +41,10 @@
       box-sizing: border-box; 
       margin: 0 auto; 
       overflow: visible; 
-      pointer-events: auto;
-       z-index: 999;
+      pointer-events: auto;  
+        z-index:2;  
+      
     }
+    
+
 }

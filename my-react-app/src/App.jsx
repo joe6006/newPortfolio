@@ -32,11 +32,11 @@ const App = () => {
     <div className="overlay"></div>
     
     <div className="nav-bar">
-      <div class="profile-block mobile-only"> 
+      <div className="profile-block mobile-only"> 
         <img 
         src={picme} 
         alt="Profile photo" 
-        class="profile-avatar" 
+        className="profile-avatar" 
         /> 
       </div>
       <header>
@@ -52,12 +52,12 @@ const App = () => {
         <button onClick={() => handleClick('skills')}>Skills</button>
         <button onClick={() => handleClick('projects')}>Projects</button>
       </div>
-
+    
       {/* ⭐ NEW WRAPPER */}
       <div className="mobile-content-slot">
         {activesection === 'about' && <RenderAboutMe handleClick={handleClick}/>}
         {activesection === 'skills' && <RenderSkills handleClick={handleClick}/>}
-        {activesection === 'projects' && <RenderProjects />}
+        {activesection === 'projects' && <RenderProjects handleClick={handleClick}/>}
           
       </div>
       
