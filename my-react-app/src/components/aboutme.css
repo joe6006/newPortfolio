@@ -1,6 +1,6 @@
     .aboutme-background{
       background-color: rgba(44, 41, 41, 0.712);
-      width: 10px;
+      width: 35vw;
       height: 90vh;
       z-index: 1;   
       color: white; 
@@ -15,6 +15,14 @@
       box-shadow:
       0px 0px 15px rgba(39, 132, 238, 0.877),
       -0em 0em 2em 1.8em rgb(14, 14, 13);
+    }
+    .root{
+       --bg-ice: #eaf6fb;
+    --mist: rgba(220,230,235,0.6);
+    --forest-deep: #0f2a20;
+    --forest-mid: #234b3b;
+    --accent-ice: #9fd7ff;
+    --text-soft: #e9f6f8;
     }
 
     .aboutme-container{
@@ -68,6 +76,7 @@
       padding-left: 10px;
       position: fixed;
       font-size: 80px;
+      color: var(--accent-ice);
     }
     .aboutme-container>p{
       text-align: left;
@@ -77,6 +86,10 @@
     
     .close-btn{
       display: none;
+    }
+    .education>h1{
+      color: var(--accent-ice);
+      text-decoration-color: var(--bg-ice);
     }
    
     @media (max-width: 480px) { 
