@@ -120,6 +120,27 @@
 
 
 /* 📱 Responsive Media Queries */
+/* Desktop and laptop layout tuning */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav-bar {
+    width: 26vw;
+    min-width: 220px;
+  }
+
+  .logo {
+    font-size: clamp(2.4rem, 4vw, 4.2rem);
+    letter-spacing: 0.28rem;
+  }
+
+  .button-list {
+    top: 7vh;
+    gap: clamp(2.25rem, 4vw, 5rem);
+  }
+
+  .desktop-disclaimer-wrapper {
+    margin-top: 9rem;
+  }
+}
 
 /*phone samsung and iphone*/
 @media (max-width: 480px) {
